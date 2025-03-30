@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agricultura Básica para Principiantes</title>
+    <link rel="icon" href="favicon.ico">
+    <script>
+        function irAPagina(tipo) {
+            var paginas = {
+                "Hortalizas": "hortalizas.html",
+                "Frutales": "frutales.html",
+                "Cereales": "cereales.html",
+                "Leguminosas": "leguminosas.html",
+                "Flores": "flores.html",
+                "Tractores": "tractores.html",
+                "Tractor Compacto": "Tractor_Compacto.html",
+                "Tractor Oruga": "Tractor_Oruga.html",
+                "Tractor Industrial": "Tractor_Industrial.html"
+            };
+            if (paginas[tipo]) {
+                window.location.href = paginas[tipo];
+            }
+        }
+
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            menu.style.display = menu.style.display === "block" ? "none" : "block";
+        }
+    </script>
+    <style>
+        body {
+            font-family: "Verdana", sans-serif;
+            background-color: #F0FFF0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #008f39;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 26px;
+            font-family: "Garamond", serif;
+            font-weight: bold;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .menu-container {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+        }
+
+        .menu-button {
+            background-color: #008f39;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .menu {
+            display: none;
+            background-color: white;
+            border: 2px solid #008f39;
+            border-radius: 10px;
+            padding: 10px;
+            position: absolute;
+            width: 220px;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .menu li {
+            padding: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .menu li:hover {
+            background-color: #C8E6C9;
+            font-weight: bold;
+        }
+
+        .container {
+            background: white;
+            width: 85%;
+            max-width: 900px;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            margin: 30px auto;
+        }
+
+        h1, h2 {
+            color: #008f39;
+            font-family: "Garamond", serif;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .image-container {
+            margin: 20px 0;
+        }
+
+        .image-container img {
+            width: 100%;
+            max-width: 350px;
+            border: 3px solid #008f39;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.05);
+        }
+
+        blockquote {
+            background-color: #f9f9f9;
+            border-left: 5px solid #008f39;
+            margin: 20px 0;
+            padding: 10px;
+            font-style: italic;
+        }
+
+        code {
+            background-color: #f5f5f5;
+            padding: 2px 5px;
+            border-radius: 5px;
+            font-family: "Courier New", monospace;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+                padding: 15px;
+            }
+
+            .menu a {
+                display: block;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">Agricultura Básica para Principiantes</div>
+
+    <div class="menu-container">
+        <button class="menu-button" onclick="toggleMenu()">☰ Menú</button>
+        <ul id="menu" class="menu">
+            <li>Tipos de Plantas</li>
+            <ul>
+                <li onclick="irAPagina('Hortalizas')">Hortalizas</li>
+                <li onclick="irAPagina('Frutales')">Frutales</li>
+                <li onclick="irAPagina('Cereales')">Cereales</li>
+                <li onclick="irAPagina('Leguminosas')">Leguminosas</li>
+                <li onclick="irAPagina('Flores')">Flores</li>
+            </ul>
+            <li>Tipos de Tractores</li>
+            <ul>
+                <li onclick="irAPagina('Tractor Compacto')">Tractor Compacto</li>
+                <li onclick="irAPagina('Tractor Oruga')">Tractor de Oruga</li>
+                <li onclick="irAPagina('Tractor Industrial')">Tractor Industrial</li>
+            </ul>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h1>La Agronomía</h1>
+        <p>
+            La agronomía es la ciencia que estudia y aplica conocimientos para mejorar la producción agrícola de manera sostenible. A través de técnicas innovadoras y respetuosas con el medio ambiente, los agricultores pueden mejorar la productividad y la calidad de los cultivos.
+        </p>
+
+        <h2>Acerca de Nosotros</h2>
+        <p>
+            Somos un equipo apasionado por la <strong>agronomía</strong> y su impacto en el mundo. Nuestra misión es proporcionar herramientas y conocimientos para lograr una <em>agricultura más eficiente</em> y amigable con el medio ambiente.
+        </p>
+
+        <div class="image-container">
+            <img src="el ranchero.jpg" alt="Imagen de rancho">
+        </div>
+
+        <h2>Importancia de la Agronomía</h2>
+        <blockquote>
+            "La agronomía es la base para la producción agrícola sostenible y el desarrollo de un sistema de producción que respete el medio ambiente." - <cite>Autor Desconocido</cite>
+        </blockquote>
+
+        <h2>Técnicas Básicas</h2>
+        <p>Existen varias técnicas esenciales para mejorar la productividad de la agricultura, como:</p>
+        <ul>
+            <li><strong>Riego eficiente:</strong> Asegura que los cultivos reciban el agua necesaria sin desperdiciar recursos.</li>
+            <li><strong>Uso de fertilizantes orgánicos:</strong> Mejora la salud del suelo y reduce el impacto ambiental.</li>
+            <li><strong>Control biológico de plagas:</strong> Uso de organismos naturales para combatir plagas, reduciendo el uso de pesticidas.</li>
+        </ul>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información sobre Flores</title>
+    <link rel="icon" href="favicon.ico">
+    <style>
+        body {
+            font-family: "Verdana", sans-serif;
+            background-color: #FFF0F5;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Encabezado */
+        .header {
+            background-color: #E91E63;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+            font-family: "Garamond", serif;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Menú */
+        .menu {
+            background-color: #C2185B;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: inline-block;
+            font-size: 18px;
+            font-family: "Garamond", serif;
+        }
+
+        .menu a:hover {
+            background-color: #E91E63;
+            border-radius: 5px;
+        }
+
+        .container {
+            background: white;
+            width: 85%;
+            max-width: 900px;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            margin: 30px auto;
+        }
+
+        h1, h2 {
+            color: #E91E63;
+            font-family: "Garamond", serif;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .image-container {
+            margin: 20px 0;
+        }
+
+        .image-container img {
+            width: 100%;
+            max-width: 400px;
+            border: 3px solid #E91E63;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.05);
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #E91E63;
+            padding: 12px;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        th {
+            background-color: #F8BBD0;
+            color: #880E4F;
+            font-weight: bold;
+        }
+
+        tr:hover {
+            background-color: #FCE4EC;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 25px;
+            background-color: #E91E63;
+            color: white;
+            text-decoration: none;
+            border-radius: 7px;
+            font-size: 18px;
+            font-family: "Garamond", serif;
+            transition: background 0.3s ease-in-out, transform 0.2s;
+        }
+
+        .back-link:hover {
+            background-color: #C2185B;
+            transform: scale(1.05);
+        }
+
+        /* Estilos para el video */
+        .video-container {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        video {
+            width: 100%;
+            max-width: 700px;
+            border: 3px solid #E91E63;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        video:hover {
+            transform: scale(1.03);
+        }
+
+        /* Diseño responsive */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+                padding: 15px;
+            }
+
+            .menu a {
+                display: block;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Información sobre Flores</div>
+    <div class="menu">
+        <a href="index.html">Inicio</a>
+        <a href="frutales.html">Frutales</a>
+        <a href="hortalizas.html">Hortalizas</a>
+        <a href="leguminosas.html">Leguminosas</a>
+        <a href="contacto.html">Contacto</a>
+    </div>
+
+    <div class="container">
+        <h1>Importancia de las Flores</h1>
+        <p>
+            Las flores son estructuras reproductivas de las plantas angiospermas. 
+            Además de su belleza, cumplen un papel fundamental en la polinización y en la producción de frutos y semillas.
+        </p>
+
+        <div class="image-container">
+            <img src="flores.jpg" alt="Imagen de flores">
+        </div>
+
+        <h2>Tipos de Flores</h2>
+        <table>
+            <tr>
+                <th>Tipo</th>
+                <th>Ejemplos</th>
+            </tr>
+            <tr>
+                <td>Flores Ornamentales</td>
+                <td>Rosa, tulipán, orquídea</td>
+            </tr>
+            <tr>
+                <td>Flores Comestibles</td>
+                <td>Caléndula, capuchina, violeta</td>
+            </tr>
+            <tr>
+                <td>Flores Medicinales</td>
+                <td>Manzanilla, lavanda, diente de león</td>
+            </tr>
+        </table>
+
+        <!-- Video Insertado -->
+        <div class="video-container">
+            <h2>Video sobre Flores</h2>
+            <video controls>
+                <source src="videoflores.mp4" type="video/mp4">
+                Tu navegador no soporta el formato de video.
+            </video>
+      
+</body>
+</html>

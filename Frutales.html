@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información sobre Frutales</title>
+    <link rel="icon" href="favicon.ico">
+    <style>
+        body {
+            font-family: Verdana, sans-serif;
+            background-color: #F0FFF0;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Encabezado */
+        .header {
+            background-color: #008f39;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+            font-family: Garamond, serif;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Menú */
+        .menu {
+            background-color: #006b2c;
+            text-align: center;
+            padding: 10px;
+        }
+        .menu a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: inline-block;
+            font-size: 18px;
+            font-family: Garamond, serif;
+        }
+        .menu a:hover {
+            background-color: #008f39;
+            border-radius: 5px;
+        }
+
+        .container {
+            background: white;
+            width: 85%;
+            max-width: 900px;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            margin: 30px auto;
+        }
+
+        h1, h2 {
+            color: #008f39;
+            font-family: Garamond, serif;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .image-container {
+            margin: 20px 0;
+        }
+
+        .image-container img {
+            width: 100%;
+            max-width: 400px;
+            border: 3px solid #008f39;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.05);
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #008f39;
+            padding: 12px;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        th {
+            background-color: #C8E6C9;
+            color: #006b2c;
+            font-weight: bold;
+        }
+
+        tr:hover {
+            background-color: #E8F5E9;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 25px;
+            background-color: #008f39;
+            color: white;
+            text-decoration: none;
+            border-radius: 7px;
+            font-size: 18px;
+            font-family: Garamond, serif;
+            transition: background 0.3s ease-in-out, transform 0.2s;
+        }
+
+        .back-link:hover {
+            background-color: #006b2c;
+            transform: scale(1.05);
+        }
+
+        /* Estilos para el video */
+        .video-container {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        video {
+            width: 100%;
+            max-width: 700px;
+            border: 3px solid #008f39;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        video:hover {
+            transform: scale(1.03);
+        }
+
+        /* Diseño responsive */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+                padding: 15px;
+            }
+
+            .menu a {
+                display: block;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Información sobre Frutales</div>
+    <div class="menu">
+        <a href="index.html">Inicio</a>
+        <a href="hortalizas.html">Hortalizas</a>
+        <a href="cereales.html">Cereales</a>
+        <a href="contacto.html">Contacto</a>
+    </div>
+
+    <div class="container">
+        <h1>Beneficios de los Frutales</h1>
+        <p>
+            Los frutales son plantas cultivadas para la producción de frutas comestibles. 
+            Son una fuente rica de vitaminas, minerales y antioxidantes esenciales para la salud humana.
+        </p>
+
+        <div class="image-container">
+            <img src="frutales.jpg" alt="Imagen de frutales">
+        </div>
+
+        <h2>Tipos de Frutales</h2>
+        <table>
+            <tr>
+                <th>Tipo</th>
+                <th>Ejemplos</th>
+            </tr>
+            <tr>
+                <td>Frutales de Árbol</td>
+                <td>Manzano, peral, duraznero</td>
+            </tr>
+            <tr>
+                <td>Frutales de Arbusto</td>
+                <td>Frambuesa, mora, grosella</td>
+            </tr>
+            <tr>
+                <td>Frutales Cítricos</td>
+                <td>Naranjo, limonero, mandarino</td>
+            </tr>
+        </table>
+
+        <!-- Video Insertado -->
+        <div class="video-container">
+            <video controls>
+                <source src="videofrutales.mp4" type="video/mp4">
+                Tu navegador no soporta el formato de video.
+            </video>
+       
+</body>
+</html>

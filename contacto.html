@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Tractores</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        body {
+            font-family: Verdana, sans-serif;
+            background-color: #F0FFF0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #008f39;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+            font-family: Garamond, serif;
+        }
+
+        .container {
+            width: 85%;
+            max-width: 900px;
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            margin: 30px auto;
+            text-align: center;
+        }
+
+        h1, h2 {
+            color: #008f39;
+            font-family: Garamond, serif;
+        }
+
+        form {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #008f39;
+            border-radius: 5px;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #008f39;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #006b2c;
+        }
+
+        #map {
+            margin-top: 30px;
+            width: 100%;
+            height: 400px;
+            border-radius: 10px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: #008f39;
+            color: white;
+            text-decoration: none;
+            border-radius: 7px;
+            font-size: 18px;
+            font-family: Garamond, serif;
+            transition: background 0.3s ease-in-out, transform 0.2s;
+        }
+
+        .back-link:hover {
+            background-color: #006b2c;
+            transform: scale(1.05);
+        }
+
+        .product-list {
+            margin-top: 15px;
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Contacto - Tractores</div>
+
+    <div class="container">
+        <h1>Contáctanos</h1>
+        <p>Si tienes alguna pregunta o deseas más información sobre nuestros tractores, llena el siguiente formulario o visítanos en nuestras sucursales.</p>
+
+        <form>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" placeholder="Tu nombre" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" placeholder="Tu correo" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+
+            <!-- Lista de opciones -->
+            <label for="producto">Producto de Interés:</label>
+            <select id="producto" required>
+                <option value="">Selecciona un producto</option>
+                <option value="tractor">Tractor</option>
+                <option value="segadora">Segadora</option>
+                <option value="arado">Arado</option>
+                <option value="fertilizante">Fertilizante</option>
+                <option value="accesorios">Accesorios</option>
+            </select>
+
+            <button type="submit">Enviar Mensaje</button>
+        </form>
+
+        <h2>Ubicación de Sucursales</h2>
+        <p>Encuentra nuestras sucursales en Aguascalientes (<abbr title="Aguascalientes">Ags</abbr>).</p>
+
+        <div id="map"></div>
+
+        <!-- Enlace para regresar al menú principal -->
+        <a href="index.html" class="back-link">Regresar al Menú</a>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('map').setView([21.8853, -102.2916], 12); // Coordenadas de Aguascalientes
+
+        // Agregar capa de OpenStreetMap
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Sucursales de venta de tractores y productos agrícolas
+        var sucursales = [
+            { lat: 21.9278, lng: -102.296, nombre: "Sucursal Centro - Tractores y Agronomía" },
+            { lat: 21.8579, lng: -102.303, nombre: "Sucursal Sur - Equipos Agrícolas" },
+            { lat: 21.9452, lng: -102.319, nombre: "Sucursal Norte - Tractores y Fertilizantes" },
+            { lat: 21.8900, lng: -102.298, nombre: "Sucursal Oeste - Agroinsumos Aguascalientes" },
+            { lat: 21.8700, lng: -102.289, nombre: "Sucursal Este - Equipos y Maquinaria Agrícola" }
+        ];
+
+        sucursales.forEach(function (sucursal) {
+            var marker = L.marker([sucursal.lat, sucursal.lng]).addTo(map)
+                .bindPopup(`<strong>${sucursal.nombre}</strong><br>Venta de tractores y productos agrícolas`)
+                .openPopup();
+        });
+    </script>
+</body>
+</html>

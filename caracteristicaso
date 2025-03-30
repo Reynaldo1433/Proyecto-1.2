@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tractor de Oruga</title>
+    <link rel="icon" href="favicon.ico">
+    <style>
+        body {
+            font-family: "Verdana", sans-serif;
+            background-color: #F0FFF0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #008f39;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 26px;
+            font-family: "Garamond", serif;
+            font-weight: bold;
+        }
+
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #008f39;
+            font-family: "Garamond", serif;
+        }
+
+        p {
+            font-size: 18px;
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .video-container {
+            margin: 20px 0;
+        }
+
+        iframe {
+            width: 80%;
+            height: 500px;
+            border: none;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">Tractor de Oruga</div>
+
+    <div class="container">
+        <h1>Características del Tractor de Oruga</h1>
+        <p>Los tractores de oruga están diseñados para ofrecer una alta tracción y estabilidad en terrenos difíciles. Son especialmente útiles en terrenos con pendiente y suelos blandos. Sus orugas distribuyen el peso del tractor, evitando que se hunda.</p>
+        <p>Estos tractores son ideales para trabajos en la agricultura, construcción y minería debido a su potencia y durabilidad.</p>
+
+        <div class="video-container">
+            <h2>Ver Video sobre el Tractor de Oruga</h2>
+            <iframe src="https://www.youtube.com/embed/ID_VIDEO_ORUGA" allowfullscreen></iframe>
+        </div>
+
+        <h2>Ventajas:</h2>
+        <ul>
+            <li>Gran capacidad de tracción.</li>
+            <li>Mayor estabilidad en terrenos difíciles.</li>
+            <li>Ideal para terrenos con pendiente o suelos blandos.</li>
+        </ul>
+
+        <h2>Desventajas:</h2>
+        <ul>
+            <li>Mayor costo de mantenimiento.</li>
+            <li>Menor velocidad en comparación con otros tractores.</li>
+        </ul>
+    </div>
+
+</body>
+</html>

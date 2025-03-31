@@ -87,26 +87,11 @@
             margin-top: 30px;
         }
 
-        .video-container iframe, .video-container video {
+        .video-container iframe {
             width: 80%;
             height: 400px;
             border-radius: 10px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Enlace de regreso */
-        .back-link {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #008f39;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 30px;
-        }
-
-        .back-link:hover {
-            background-color: #006b2c;
         }
 
         /* Estilo de botones */
@@ -137,15 +122,15 @@
     <!-- Contenedor de contenido -->
     <div class="container">
         <!-- Caja de beneficios -->
-        <div class="info-box">
+        <section class="info-box">
             <h1>Beneficios del Tractor Compacto</h1>
             <p>
                 El tractor compacto es ideal para pequeños terrenos agrícolas. Su diseño compacto lo hace fácil de maniobrar, incluso en espacios reducidos. Es perfecto para quienes buscan eficiencia y versatilidad en terrenos pequeños.
             </p>
-        </div>
+        </section>
 
         <!-- Caja de características -->
-        <div class="info-box">
+        <section class="info-box">
             <h2>Características del Tractor Compacto</h2>
             <table>
                 <tr>
@@ -165,14 +150,15 @@
                     <td>Consumo eficiente de combustible, adecuado para trabajos agrícolas moderados.</td>
                 </tr>
             </table>
-        </div>
+        </section>
 
-          <!-- Sección de Videos -->
-        <div class="videos">
-            <iframe width="560" height="315" src="https://youtu.be/58BDIxhCVJs?si=H5hYfRbNKue0B4gD" title="Tractor Compacto"
-                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
+        <!-- Sección de Video -->
+        <section class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/58BDIxhCVJs" 
+                title="Tractor Compacto" frameborder="0" 
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
+        </section>
 
         <!-- Botón para volver a la página principal -->
         <div class="button-container">

@@ -1,213 +1,781 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE HTML>
+
+<HTML Lang="es">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Agricultura Básica para Principiantes</title>
+
     <link rel="icon" href="favicon.ico">
+
     <script>
+
         function irAPagina(tipo) {
+
             var paginas = {
-                "Hortalizas": "Hortalizas.html",
-                "Frutales": "Frutales.html",
-                "Cereales": "Cereales.html",
+
+                "Hortalizas": "hortalizas.html",
+
+                "Frutales": "frutales.html",
+
+                "Cereales": "cereales.html",
+
                 "Leguminosas": "leguminosas.html",
-                "Flores": "Flores.html",
+
+                "Flores": "flores.html",
+
                 "Tractores": "tractores.html",
+
                 "Tractor Compacto": "Tractor_Compacto.html",
+
                 "Tractor Oruga": "Tractor_Oruga.html",
+
                 "Tractor Industrial": "Tractor_Industrial.html"
+
             };
+
             if (paginas[tipo]) {
+
                 window.location.href = paginas[tipo];
+
             }
+
         }
+
+
 
         function toggleMenu() {
-            var menu = document.getElementById("menu");
-            menu.style.display = menu.style.display === "block" ? "none" : "block";
+
+            var menú = document.getElementById("menú");
+
+            menú.style.display = menú.style.display === "block" ? "none" : "block";
+
         }
+
     </script>
+
     <style>
+
+	#tecnicaForm {
+
+    margin-top: 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+}
+
+
+
+#tecnicaForm input, #tecnicaForm button {
+
+    padding: 10px;
+
+    Font-size: 16px;
+
+    border-radius: 8px;
+
+    border: 1px solid #008f39;
+
+}
+
+
+
+#tecnicaForm button {
+
+    background-color: #008f39;
+
+    color: White;
+
+    cursor: pointer;
+
+}
+
+
+
+#tecnicaForm button:hover {
+
+    background-color: #006f2c;
+
+}
+
+
+
+table th, table td {
+
+    padding: 10px;
+
+    text-align: left;
+
+}
+
+
+
+button {
+
+    margin-right: 5px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    padding: 5px 10px;
+
+    cursor: pointer;
+
+}
+
+
+
         body {
-            font-family: "Verdana", sans-serif;
+
+            Font-family: "Verdana", sans-serif;
+
             background-color: #F0FFF0;
+
             margin: 0;
+
             padding: 0;
+
         }
+
+
 
         .header {
+
             background-color: #008f39;
-            color: white;
+
+            color: White;
+
             text-align: center;
+
             padding: 15px;
-            font-size: 26px;
-            font-family: "Garamond", serif;
-            font-weight: bold;
+
+            Font-size: 26px;
+
+            Font-family: "Garamond", serif;
+
+            Font-weight: bold;
+
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+
         }
 
-        .menu-container {
+
+
+        .menú-container {
+
             position: fixed;
+
             top: 20px;
+
             left: 20px;
+
             z-index: 1000;
+
         }
 
-        .menu-button {
+
+
+        .menú-button {
+
             background-color: #008f39;
-            color: white;
+
+            color: White;
+
             padding: 12px 20px;
+
             border: none;
+
             border-radius: 5px;
+
             cursor: pointer;
-            font-size: 18px;
+
+            Font-size: 18px;
+
         }
 
-        .menu {
+
+
+        .menú {
+
             display: none;
-            background-color: white;
+
+            background-color: White;
+
             border: 2px solid #008f39;
+
             border-radius: 10px;
+
             padding: 10px;
+
             position: absolute;
+
             width: 220px;
+
             box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+
         }
 
-        .menu li {
+
+
+        .menú li {
+
             padding: 10px;
+
             cursor: pointer;
-            font-size: 16px;
+
+            Font-size: 16px;
+
             transition: background-color 0.3s;
+
         }
 
-        .menu li:hover {
+
+
+        .menú li:hover {
+
             background-color: #C8E6C9;
-            font-weight: bold;
+
+            Font-weight: bold;
+
         }
+
+
 
         .container {
-            background: white;
+
+            background: White;
+
             width: 85%;
+
             max-width: 900px;
+
             padding: 25px;
+
             border-radius: 15px;
+
             box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+
             text-align: center;
+
             margin: 30px auto;
+
         }
+
+
 
         h1, h2 {
+
             color: #008f39;
-            font-family: "Garamond", serif;
-            font-size: 28px;
+
+            Font-family: "Garamond", serif;
+
+            Font-size: 28px;
+
             margin-bottom: 15px;
+
         }
+
+
 
         p {
-            font-size: 18px;
+
+            Font-size: 18px;
+
             color: #333;
+
             line-height: 1.6;
+
             margin-bottom: 20px;
+
         }
+
+
 
         .image-container {
+
             margin: 20px 0;
+
         }
+
+
 
         .image-container img {
+
             width: 100%;
+
             max-width: 350px;
+
             border: 3px solid #008f39;
+
             border-radius: 10px;
+
             transition: transform 0.3s;
+
         }
+
+
 
         .image-container img:hover {
+
             transform: scale(1.05);
+
         }
+
+
 
         blockquote {
+
             background-color: #f9f9f9;
+
             border-left: 5px solid #008f39;
+
             margin: 20px 0;
+
             padding: 10px;
-            font-style: italic;
+
+            Font-style: italic;
+
         }
+
+
 
         code {
+
             background-color: #f5f5f5;
+
             padding: 2px 5px;
+
             border-radius: 5px;
-            font-family: "Courier New", monospace;
+
+            Font-family: "Courier New", monospace;
+
         }
+
+
 
         @media (max-width: 768px) {
+
             .container {
+
                 width: 95%;
+
                 padding: 15px;
+
             }
 
-            .menu a {
+
+
+            .menú a {
+
                 display: block;
+
                 padding: 10px;
+
             }
+
         }
+
     </style>
+
 </head>
+
 <body>
+
+
 
     <div class="header">Agricultura Básica para Principiantes</div>
 
-    <div class="menu-container">
-        <button class="menu-button" onclick="toggleMenu()">☰ Menú</button>
-        <ul id="menu" class="menu">
+
+
+    <div class="menú-container">
+
+        <button class="menú-button" onclick="toggleMenu()">☰ Menú</button>
+
+        <ul id="menú" class="menú">
+
             <li>Tipos de Plantas</li>
+
             <ul>
+
                 <li onclick="irAPagina('Hortalizas')">Hortalizas</li>
+
                 <li onclick="irAPagina('Frutales')">Frutales</li>
+
                 <li onclick="irAPagina('Cereales')">Cereales</li>
+
                 <li onclick="irAPagina('Leguminosas')">Leguminosas</li>
+
                 <li onclick="irAPagina('Flores')">Flores</li>
+
             </ul>
+
             <li>Tipos de Tractores</li>
+
             <ul>
+
                 <li onclick="irAPagina('Tractor Compacto')">Tractor Compacto</li>
+
                 <li onclick="irAPagina('Tractor Oruga')">Tractor de Oruga</li>
+
                 <li onclick="irAPagina('Tractor Industrial')">Tractor Industrial</li>
+
             </ul>
+
         </ul>
+
     </div>
+
+
 
     <div class="container">
+
         <h1>La Agronomía</h1>
+
         <p>
+
             La agronomía es la ciencia que estudia y aplica conocimientos para mejorar la producción agrícola de manera sostenible. A través de técnicas innovadoras y respetuosas con el medio ambiente, los agricultores pueden mejorar la productividad y la calidad de los cultivos.
+
         </p>
+
+
 
         <h2>Acerca de Nosotros</h2>
+
         <p>
+
             Somos un equipo apasionado por la <strong>agronomía</strong> y su impacto en el mundo. Nuestra misión es proporcionar herramientas y conocimientos para lograr una <em>agricultura más eficiente</em> y amigable con el medio ambiente.
+
         </p>
 
+
+
         <div class="image-container">
+
             <img src="el ranchero.jpg" alt="Imagen de rancho">
+
         </div>
 
+
+
         <h2>Importancia de la Agronomía</h2>
+
         <blockquote>
+
             "La agronomía es la base para la producción agrícola sostenible y el desarrollo de un sistema de producción que respete el medio ambiente." - <cite>Autor Desconocido</cite>
+
         </blockquote>
 
-        <h2>Técnicas Básicas</h2>
-        <p>Existen varias técnicas esenciales para mejorar la productividad de la agricultura, como:</p>
-        <ul>
-            <li><strong>Riego eficiente:</strong> Asegura que los cultivos reciban el agua necesaria sin desperdiciar recursos.</li>
-            <li><strong>Uso de fertilizantes orgánicos:</strong> Mejora la salud del suelo y reduce el impacto ambiental.</li>
-            <li><strong>Control biológico de plagas:</strong> Uso de organismos naturales para combatir plagas, reduciendo el uso de pesticidas.</li>
-        </ul>
+<h2>Gestión de Técnicas Agrícolas</h2>
+
+
+
+<form id="tecnicaForm">
+
+    <input type="hidden" id="tecnicaId">
+
+
+
+    <label>Nombre de la técnica:</label>
+
+    <input type="text" id="nombre" placeholder="Ej. Riego por goteo" required>
+
+
+
+    <label>Descripción:</label>
+
+    <input type="text" id="descripción" placeholder="Breve descripción" required>
+
+
+
+    <label>Tipo de técnica:</label>
+
+    <select id="tipo">
+
+        <option value="riego">Riego</option>
+
+        <option value="siembra">Siembra</option>
+
+        <option value="fertilización">Fertilización</option>
+
+        <option value="cosecha">Cosecha</option>
+
+    </select>
+
+
+
+    <label>Requiere maquinaria especializada:</label><br>
+
+    <input type="radio" name="maquinaria" value="sí" checked> Sí
+
+    <input type="radio" name="maquinaria" value="no"> No<br><br>
+
+
+
+    <label>
+
+        <input type="checkbox" id="certificada"> Técnica certificada por normas oficiales
+
+    </label>
+
+
+
+    <button type="submit">Guardar Técnica</button>
+
+</form>
+
+
+
+<h3>Técnicas guardadas</h3>
+
+<table id="tecnicasTable" border="1" style="width: 100%; margin-top: 20px;">
+
+    <thead>
+
+        <tr>
+
+            <th>Nombre</th>
+
+            <th>Descripción</th>
+
+            <th>Tipo</th>
+
+            <th>Maquinaria</th>
+
+            <th>Certificada</th>
+
+            <th>Acciones</th>
+
+        </tr>
+
+    </thead>
+
+    <tbody></tbody>
+
+</table>
+
+
+
     </div>
 
+<script>
+
+    let db;
+
+
+
+    const request = indexedDB.open("AgriculturaDB", 1);
+
+
+
+    request.onerror = () => console.error("❌ Error al abrir IndexedDB");
+
+    request.onsuccess = (event) => {
+
+        db = event.target.result;
+
+        mostrarTecnicas();
+
+    };
+
+
+
+    request.onupgradeneeded = (event) => {
+
+        db = event.target.result;
+
+        const store = db.createObjectStore("técnicas", { keyPath: "id", autoIncrement: true });
+
+        store.createIndex("nombre", "nombre", { unique: false });
+
+    };
+
+
+
+    function guardarTecnica(event) {
+
+        event.preventDefault();
+
+
+
+        const id = document.getElementById("tecnicaId").value;
+
+        const nombre = document.getElementById("nombre").value;
+
+        const descripción = document.getElementById("descripción").value;
+
+        const tipo = document.getElementById("tipo").value;
+
+        const maquinaria = document.querySelector('input[name="maquinaria"]:checked').value;
+
+        const certificada = document.getElementById("certificada").checked;
+
+
+
+        const técnica = { nombre, descripción, tipo, maquinaria, certificada };
+
+
+
+        const transaction = db.transaction(["técnicas"], "readwrite");
+
+        const store = transaction.objectStore("técnicas");
+
+
+
+        if (id) {
+
+            técnica.id = Number(id);
+
+            store.put(técnica);
+
+        } else {
+
+            store.add(técnica);
+
+        }
+
+
+
+        transaction.oncomplete = () => {
+
+            document.getElementById("tecnicaForm").reset();
+
+            mostrarTecnicas();
+
+        };
+
+    }
+
+
+
+    function mostrarTecnicas() {
+
+        const tbody = document.querySelector("#tecnicasTable tbody");
+
+        tbody.innerHTML = "";
+
+
+
+        const transaction = db.transaction(["técnicas"], "readonly");
+
+        const store = transaction.objectStore("técnicas");
+
+
+
+        store.openCursor().onsuccess = (event) => {
+
+            const cursor = event.target.result;
+
+            if (cursor) {
+
+                const { id, nombre, descripción, tipo, maquinaria, certificada } = cursor.value;
+
+
+
+                const row = document.createElement("tr");
+
+                row.innerHTML = `
+
+                    <td>${nombre}</td>
+
+                    <td>${descripción}</td>
+
+                    <td>${tipo}</td>
+
+                    <td>${maquinaria}</td>
+
+                    <td>${certificada ? "✅" : "❌"}</td>
+
+                    <td>
+
+                        <button onclick="editarTecnica(${id})">✏</button>
+
+                        <button onclick="eliminarTecnica(${id})">🗑</button>
+
+                    </td>
+
+                `;
+
+                tbody.appendChild(row);
+
+                cursor.continue();
+
+            }
+
+        };
+
+    }
+
+
+
+    function editarTecnica(id) {
+
+        const transaction = db.transaction(["técnicas"], "readonly");
+
+        const store = transaction.objectStore("técnicas");
+
+        const request = store.get(id);
+
+
+
+        request.onsuccess = () => {
+
+            const t = request.result;
+
+            document.getElementById("tecnicaId").value = t.id;
+
+            document.getElementById("nombre").value = t.nombre;
+
+            document.getElementById("descripción").value = t.descripcion;
+
+            document.getElementById("tipo").value = t.tipo;
+
+            document.querySelector(input[name="maquinaria"][value="${t.maquinaria}"]).checked = true;
+
+            document.getElementById("certificada").checked = t.certificada;
+
+        };
+
+    }
+
+
+
+    function eliminarTecnica(id) {
+
+        const transaction = db.transaction(["técnicas"], "readwrite");
+
+        const store = transaction.objectStore("técnicas");
+
+        store.delete(id);
+
+
+
+        transaction.oncomplete = () => {
+
+            mostrarTecnicas();
+
+        };
+
+    }
+
+
+
+    document.getElementById("tecnicaForm").addEventListener("submit", guardarTecnica);
+
+</script>
+
+
+
+
+
 </body>
-</html>
+
+</HTML>
